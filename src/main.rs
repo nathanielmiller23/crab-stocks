@@ -14,7 +14,7 @@ struct Stock {
 }
 
 fn get_stock_info(symbol: &str) -> Option<Stock> {
-    let url = format!("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={}&apikey=Y5X6GF9E7MXX8YZY", symbol);
+    let url = format!("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={}&apikey=demo", symbol);
     let response = ureq::get(&url).call();
 
     if let Ok(response) = response {
